@@ -15,6 +15,17 @@
   margin-top: 25vh;
 }
 
+#showcase .showcase-image {
+  position:absolute;
+  bottom:0px;
+  right:30%;
+  max-height:35vh;
+}
+
+#showcase img {
+  max-height: 35vh;
+}
+
 #showcase h1 {
   font-size: 6rem;
   margin-bottom: 0;
@@ -176,6 +187,26 @@
         background-attachment: scroll;
     }
 }
+@media (max-width: 909px) {
+  #showcase .showcase-image {
+    height:15vh;
+  }
+  #showcase img {
+    height:15vh;
+  }
+}
+
+@media (max-width: 1200px) {
+  #showcase .showcase-image {
+    right:10%;
+  }
+}
+
+@media (min-width: 910px)and (max-width: 992px) {
+  #showcase .showcase-image {
+    right: 0px;
+  }
+}
 
 @media (max-width: 910px) {
   #showcase {
@@ -210,6 +241,7 @@
     margin:auto;
   }
 }
+
 
 
 @media screen and (max-height: 580px) {
