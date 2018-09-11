@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="Tony O'Brien Osteopathy, information, articles and services in Dublin and Tavira">
+		<title>Tony O'Brien Osteopathy</title>
+		<link rel="shortcut icon" href="/tony-fav-icon.ico" type="image/x-icon">
+		<link href="/styles/site.css" rel="stylesheet">
+		<link href="/styles/additional.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		{{!-- This file provides the default styling for the KeystoneJS Content Editor
+			- only renders when user is logged in and admin--}}
+		{{{isAdminEditorCSS user}}}
+
+		{{!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+		//- Safely remove this block if you are not targeting IE8 --}}
+		<!--[if lt IE 9]>
+			<script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.js"></script>
+			<script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	<body>
+		<div id="header">
+			<div class="container">
+				<div role="navigation" class="navbar navbar-default navbar-fixed-top">
+					<div class="container-fluid">
+						<div class="navbar-header">
+								<a href="/"><img src="/images/LOGO.png"></a>
+							<button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+							</button>
+						</div>
+						<div class="collapse navbar-collapse">
+							<ul class="nav navbar-nav navbar-left">
+									{{# each navLinks}}
+									<li {{#ifeq ../section key}}class="active"{{else}}{{/ifeq}}>
+										<a href="{{ href }}">{{ label }}</a>
+									</li>
+								{{/each}}
+							</ul>
+							<ul class="nav navbar-nav navbar-right">
+								{{#if user}}
+								<li><a href="/keystone/signout">Sign Out</a></li>
+								{{else}}
+								<li><a href="/keystone/signin">Sign In</a></li>
+								{{/if}}
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="body">
+
+			{{#if messages}}
+			<div id="flash-messages" class="container">
+				{{#if messages.info}}
+				<div class="alert alert-info">
+						{{{flashMessages messages.info}}}
+				</div>
+				{{/if}}
+				{{#if messages.success}}
+				<div class="alert alert-success">
+						{{{flashMessages messages.success}}}
+				</div>
+				{{/if}}
+				{{#if messages.warning}}
+				<div class="alert alert-warning">
+						{{{flashMessages messages.warning}}}
+				</div>
+				{{/if}}
+				{{#if messages.error}}
+				<div class="alert alert-danger">
+						{{{flashMessages messages.error}}}
+				</div>
+				{{/if}}
+			</div>
+			{{/if}}
+			<br>
+			{{{body}}}
+		</div>
+		<section id="footer-logos">
+		  <div class="container">
+				<hr>
+		    <div class="logos">
+		      <img src="/images/Quinn-logo.png" alt="">
+		      <img src="/images/VHI_Healthcare_logo.png" alt="">
+		      <img src="/images/aviva-logo.png" alt="">
+		    </div>
+		  </div>
+		</section>
+			<div id="footer" class="panel-footer">
+				<table>
+					<tr>
+						<th>Contact Us</th><th>Related Links</th>
+					</tr>
+					<tr>
+						<td>
+							<a href="/contact">Contact Information</a>
+							<br>
+							<a href="http://www.facebook.com"> <i class="fa fa-facebook">&nbsp Facebook</i></a>
+							<br>
+							<a href="http://www.linkedin.com"> <i class="fa fa-linkedin-square">&nbsp Linkedin</i></a>
+						</td>
+						<td>
+							<a href="https://www.osteopathy.ie/">Osteopathic Council of Ireland (O.C.I.)</a>
+							<br>
+							<a href="https://www.forewards.eu/">Forum for Osteopathic Regulation in Europe (F.O.R.E.)</a>
+							<br>
+							<a href="https://classical-osteopathy.org/">Institute of Classical Osteopathy (I.C.O.)</a>
+							<br>
+							<a href="http://www.littlejohncentre.ie/">The Littlejohn Centre</a>
+							<br>
+							<a href="https://www.uco.ac.uk/">British School of Osteopathy</a>
+							<br>
+							<a href="http://www.aviva.ie/health/">Aviva Health Plans</a>
+							<br>
+							<a href="http://www.quinn-healthcare.com/products_and_services.htm">Quinn Health Plans</a>
+							<br>
+							<a href="http://www.vhi.ie/healthinsurance/index.jsp">VHI Health Plans</a>
+						</td>
+					</tr>
+
+				</table>
+				<br>
+				<i class="copyright">Copyright © Tony O'Brien 2018.
+All Rights Reserved.</i>
+				<p>Powered by <a href="http://keystonejs.com" target="_blank">KeystoneJS</a>.</p>
+			</div>
+		{{!--
+			//- jQuery 1.11.3 is included by default, and required by both Bootstrap
+			//- and the KeystoneJS Content Editor. If you are not targeting IE8,
+			//- you can upgrade to 2.1.4 (also bundled) for better performance.
+		--}}
+		<script src="/js/jquery/jquery-1.11.3.min.js"></script>
+		{{!--
+			//- Customise which Bootstrap javascript files are served by including
+			//- them specifically here, instead of bootstrap-3.3.5.min.js
+		--}}
+		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		{{{isAdminEditorJS user}}}
+	</body>
+</html>
