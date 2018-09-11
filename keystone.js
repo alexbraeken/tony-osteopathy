@@ -11,11 +11,11 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-	'name': 'Acme',
-	'brand': 'Acme',
+	'name': 'tony-osteopathy',
+	'brand': 'Tony O\'Brien Osteopathy',
 	'sass': 'public',
 	'static': 'public',
-	'favicon': 'public/favicon.ico',
+	'favicon': 'public/tony-fav-icon.ico',
 	'views': 'templates/views',
 	'view engine': '.hbs',
 
