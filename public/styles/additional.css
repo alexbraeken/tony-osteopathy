@@ -1,3 +1,7 @@
+/* Header */
+#header .nav-logo{
+  max-width: 80vw;
+}
 
 /* Showcase */
 #showcase {
@@ -20,6 +24,12 @@
   bottom:0px;
   right:30%;
   max-height:35vh;
+  z-index: 1:
+}
+
+#showcase .showcase-container {
+  position: absolute;
+  z-index: 2:
 }
 
 #showcase img {
@@ -30,10 +40,12 @@
   font-size: 6rem;
   margin-bottom: 0;
   color:rgb(45, 122, 227);
+  z-index: 2;
 }
 
 #showcase h2 {
   font-size: 4rem;
+  z-index: 2;
 }
 
 
