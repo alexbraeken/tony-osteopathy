@@ -29,6 +29,7 @@ exports = module.exports = function (req, res) {
 				locals.validationErrors = err.errors;
 			} else {
 				locals.enquirySubmitted = true;
+				//Send email
 				var transporter = nodemailer.createTransport({
 					service: 'hotmail',
 					auth: {
@@ -36,7 +37,7 @@ exports = module.exports = function (req, res) {
 						pass: process.env.email_password
 					}
 				});
-
+				
 				var mailOptions = {
 					from: 'alex_barca2006@hotmail.com',
 					to: 'alex_barca2006@hotmail.com',

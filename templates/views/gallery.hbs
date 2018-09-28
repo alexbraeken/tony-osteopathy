@@ -6,7 +6,6 @@
 	{{#if galleries}}
 		{{#each galleries}}
 		<h2>{{name}}
-			<div class="pull-right text-muted">19th May 2014</div>
 		</h2>
 		<div class="row gallery-images">
 				{{#if heroImage}}
@@ -17,9 +16,10 @@
 				<div class="col-sm-8 col-md-8">
 					<div class="row">
 						{{#each images}}
-						<div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
-							<img src="{{cloudinaryUrl width='300' height='300'}}" class="img-rounded">
-						</div>
+						<a data-toggle="modal"
+						data-target="#image-modal" data-imageinfo="{{cloudinaryUrl}}"><div class="col-xs-4 col-sm-4 col-md-3 gallery-image">
+							<img class="gallery-image" src="{{cloudinaryUrl width='300' height='300'}}" class="img-rounded" >
+						</div></a>
 						{{/each}}
 					</div>
 				</div>
@@ -29,4 +29,20 @@
 	<!-- else -->
 	<h3 class="text-muted">There are no image galleries yet.</h3>
 	{{/if}}
+	<div class="modal fade" id="image-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img class="modal-image" src="" alt="">
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
 </div>

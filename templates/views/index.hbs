@@ -6,12 +6,12 @@
       <img src="/images/body.png" alt="">
     </div>
     <div class="showcase-container">
-      <h1 class="showcase-head">TONY O'BRIEN OSTEOPATHY</h1>
+      <h1 class="showcase-head">TONY O'BRIEN OSTEOPATH</h1>
       <h2>Hands On Diagnosis And Treatment</h2>
       <p class="showcase-lead hidden-xs">
         Find out more about what Osteopathy and Tony O'Brien can do for you.
       </p>
-    </div>  
+    </div>
   </div>
 </div>
 
@@ -23,17 +23,26 @@
 			Services
 		</h2>
     <hr>
-		<p class="lead">With therapy sessions avaialable in Dublin, Ireland and Tavira, Portugal, services can be beneficial for more than just broken bones or burns. Many injuries and conditions will benefit from osteopathic treatment:
+		<p class="lead">With therapy sessions avaialable in Dublin, Ireland and Tavira, Portugal, osteopathic treatment can be beneficial in most aspects of health and wellbeing including and not limited to:
 			<ul>
 				<li>Sports or work injuries: acute strains, sprains, pulled muscles</li>
-				<li>Chronic injuries: low back pain, upper back pain, shoulder and neck pain</li>
+				<li>Chronic injuries: neck and back pain</li>
 				<li>Postural strains: both acute and chronic such as repetitive strain injuries</li>
 				<li>TMJ (jaw) strains</li>
 				<li>Poor lymphatic drainage</li>
-				<li>Sinus problems: both acute and chronic</li>
-				<li>Injuries incurred from birth and birthing</li>
-				<li>Whiplash and whiplash-related injuries</li>
+        <div class="collapse extraCollapse" id="extra-benefits">
+  				<li>Sinus problems: both acute and chronic</li>
+          <li>Whiplash and whiplash-related injuries</li>
+  				<li>Injuries incurred from birth and birthing</li>
+          <li>Pregnancy pains</li>
+          <li>Birthing Strains</li>
+          <li>Colic, reflux,constipation</li>
+          <li>Click hips</li>
+          <li>Flat head syndrome </li>
+        </div>
 			</ul>
+      <button type="button" id="expand-button" class="btn" data-toggle="collapse" data-target="#extra-benefits"><i id=expand-icon class="fas fa-angle-double-down"></i>
+      </button>
 		</p>
 	</div>
 </section>
@@ -41,40 +50,86 @@
 <!-- What to Expect -->
 
 <section id="expect" class="section">
-  <div class="container">
-    <h2 class="section-head">
-			What To Expect
-		</h2>
-    <hr>
-    <h3>After making an appointment, you can always expect the following from your Osteopath</h3>
-    <br>
-    <div class="subSection">
-      <img src="/images/checked.png" alt="">
-      <br>
-      <h3>Full case history</h3>
-      <div class="description">
+  <div id="mainCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
+    <div class="carousel-headers">
+      <h2 class="section-head">
+        <a data-target="#mainCarousel" data-slide-to="0"> What To Expect </a> / <a data-target="#mainCarousel" data-slide-to="1"> Testimonials </a> </h2>
+    </div>
+    <div class="header-indicators">
+      <ol class="carousel-indicators">
+        <li data-target="#mainCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#mainCarousel" data-slide-to="1"></li>
+      </ol>
+    </div>
+    <div class="carousel-inner">
+    <div class="item active">
+      <div class="container">
+
         <hr>
-        When you first visit an osteopath a full case history will be taken
+        <h3>After making an appointment, you can always expect the following from your Osteopath</h3>
+        <br>
+        <div class="subSection">
+          <img src="/images/checked.png" alt="">
+          <br>
+          <h3>Full case history</h3>
+          <div class="description">
+            <hr>
+            When you first visit an osteopath a full case history will be taken
+          </div>
+        </div>
+        <div class="subSection">
+          <img src="/images/loupe.png" alt="">
+          <br>
+          <h3>Find Weaknesses</h3>
+          <div class="description">
+            <hr>
+            Then I will ask you to perform a simple series of movements. Using a highly developed sense of touch, called palpation, I will identify points of weakness, imbalance, or excessive strain throughout the body.
+          </div>
+        </div>
+        <div class="subSection">
+          <img src="/images/eye.png" alt="">
+          <br>
+          <h3>Additional Tests</h3>
+          <div class="description">
+            <hr>
+            I may need additional medical investigations such as x-rays. This allows for appropriate diagnosis and a suitable treatment plan to be developed.
+          </div>
+        </div>
       </div>
     </div>
-    <div class="subSection">
-      <img src="/images/loupe.png" alt="">
-      <br>
-      <h3>Find Weaknesses</h3>
-      <div class="description">
+
+<!-- Testimonials -->
+{{#if data.testimonials }}
+    <div class="item">
+
+      <section id="testimonials" class="section">
+      <div class="container" >
+
         <hr>
-        Then I will ask you to perform a simple series of movements. Using a highly developed sense of touch, called palpation, I will identify points of weakness, imbalance, or excessive strain throughout the body.
+        {{#each data.testimonials}}
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title mt-1">{{name}}, {{age}}</h3>
+            <hr>
+            <p><i class="fas fa-quote-left"></i>{{{content}}}<i class="fas fa-quote-right"></i>
+          </div>
+        </div>
+        {{/each}}
       </div>
+      </section>
+
     </div>
-    <div class="subSection">
-      <img src="/images/eye.png" alt="">
-      <br>
-      <h3>Additional Tests</h3>
-      <div class="description">
-        <hr>
-        I may need additional medical investigations such as x-rays. This allows for appropriate diagnosis and a suitable treatment plan to be developed.
-      </div>
-    </div>
+
+  </div>
+  <a class="left carousel-control" href="#mainCarousel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#mainCarousel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  {{/if}}
   </div>
 </section>
 
@@ -82,7 +137,7 @@
 
 <section id="what-is" class="section">
   <div class="container">
-    <h2 class="section-head">What is Osteopathy</h2>
+    <h2 class="section-head">What Is Osteopathy</h2>
     <hr>
     <p class="lead">
       <img src="/images/whatisosteopathy_pic2.jpg" alt="" class="hidden-xs">
@@ -91,6 +146,8 @@
     </p>
   </div>
 </section>
+
+<!-- About -->
 <section id="about" class="section">
   <div class="container">
     <h2 class="section-head">About Tony O'Brien</h2>

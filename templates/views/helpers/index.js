@@ -207,7 +207,7 @@ module.exports = function () {
 		return '/articles?page=' + pageNumber;
 	};
 
-	// create the category url for a blog-category page
+	// create the category url for an article-category page
 	_helpers.categoryUrl = function (categorySlug, options) {
 		return ('/articles/' + categorySlug);
 	};

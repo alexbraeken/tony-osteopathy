@@ -48,6 +48,15 @@
   z-index: 2;
 }
 
+/* Modal */
+.modal-image{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.modal-image img {
+  align:center;
+}
 
 /* Section */
 .section {
@@ -83,8 +92,39 @@
 }
 
 /* Services */
+#services ul {
+  margin:auto;
+}
+
 #services li {
   font-size: 2rem;
+}
+
+#services .btn {
+  border:none;
+  background-color: inherit;
+  color: rgb(45, 122, 227);
+  font-size: 4rem;
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+}
+
+#services .btn:hover{
+  color: rgb(45, 50, 250);
+}
+
+/* Carousel */
+
+
+.carousel-headers a{
+  color: #fff;
+  height:2vh;
+}
+
+.carousel-headers a:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* What to expect */
@@ -106,6 +146,28 @@
 #expect img {
   width: 50%;
   margin: auto;
+}
+
+/* Testimonials */
+
+#testimonials {
+  display: inline-block;
+  margin-left: 5vw;
+  text-align: left;
+}
+
+.card {
+  display: inline;
+  max-width: 33%;
+}
+
+.card-body {
+  background-color: #fff;
+  margin: 5px;
+  padding: 10px;
+  color:rgb(45, 122, 227);
+  border-radius: 25px;
+  box-shadow: 3px 3px rgb(28, 64, 112);
 }
 
 
@@ -188,11 +250,24 @@
   vertical-align: top;
 }
 
+/* Contact info format */
+#contact-header{
+  background-color: rgb(45, 122, 227);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.contact-info{
+  color: #fff;
+}
+
 /* Copyright */
 
 .copyright {
   text-align: center;
 }
+
 
 @media only screen and (max-device-width: 1366px) {
     .parallax {
@@ -252,6 +327,10 @@
     vertical-align: top;
     margin:auto;
   }
+  #services li {
+    font-size: 1.5rem;
+  }
+
 }
 
 

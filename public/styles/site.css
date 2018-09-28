@@ -5496,21 +5496,14 @@ button.close {
   font-size: 20px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
-  .carousel-control.left {
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1); }
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  /*&.left {
+    @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
+  }*/ }
   .carousel-control.right {
     left: auto;
     right: 0;
-    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1); }
+    /*@include gradient-horizontal($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));*/ }
   .carousel-control:hover, .carousel-control:focus {
     outline: 0;
     color: #fff;
@@ -5546,19 +5539,17 @@ button.close {
     content: '\203a'; }
 
 .carousel-indicators {
-  position: absolute;
-  bottom: 10px;
   left: 50%;
   z-index: 15;
   width: 60%;
-  margin-left: -30%;
+  margin: auto;
   padding-left: 0;
   list-style: none;
   text-align: center; }
   .carousel-indicators li {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 150px;
+    height: 8px;
     margin: 1px;
     text-indent: -999px;
     border: 1px solid #fff;
@@ -5568,8 +5559,8 @@ button.close {
     background-color: rgba(0, 0, 0, 0); }
   .carousel-indicators .active {
     margin: 0;
-    width: 12px;
-    height: 12px;
+    width: 152px;
+    height: 10px;
     background-color: #fff; }
 
 .carousel-caption {
@@ -5585,6 +5576,12 @@ button.close {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
   .carousel-caption .btn {
     text-shadow: none; }
+
+@media screen and (max-width: 580px) {
+  .carousel-indicators li {
+    width: 50px; }
+  .carousel-indicators .active {
+    width: 52px; } }
 
 @media screen and (min-width: 768px) {
   .carousel-control .glyphicon-chevron-left,
@@ -5604,9 +5601,7 @@ button.close {
   .carousel-caption {
     left: 20%;
     right: 20%;
-    padding-bottom: 30px; }
-  .carousel-indicators {
-    bottom: 20px; } }
+    padding-bottom: 30px; } }
 
 .clearfix:before, .clearfix:after {
   content: " ";

@@ -75,7 +75,6 @@ exports = module.exports = function (req, res) {
 
 		q.exec(function (err, results) {
 			locals.data.articles = results;
-			locals.data.banner = locals.data.articles.results[0]._doc.image.url;
 			next(err);
 		});
 	});

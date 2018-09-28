@@ -1,7 +1,7 @@
 var keystone = require('keystone');
 
 /**
- * PostCategory Model
+ * ArticleCategory Model
  * ==================
  */
 

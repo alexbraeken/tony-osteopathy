@@ -11,8 +11,8 @@ var handlebars = require('express-handlebars');
 // and documentation.
 
 keystone.init({
-	'name': 'tony-osteopathy',
-	'brand': 'Tony O\'Brien Osteopathy',
+	'name': 'tony-osteopath',
+	'brand': 'Tony O\'Brien Osteopath',
 	'sass': 'public',
 	'static': 'public',
 	'favicon': 'public/tony-fav-icon.ico',
@@ -56,6 +56,7 @@ keystone.set('nav', {
 	galleries: 'galleries',
 	enquiries: 'enquiries',
 	users: 'users',
+	testimonials: 'testimonials',
 });
 
 // Start Keystone to connect to your database and initialise the web server

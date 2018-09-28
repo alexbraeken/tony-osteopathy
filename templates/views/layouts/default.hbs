@@ -4,12 +4,12 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="description" content="Tony O'Brien Osteopathy, information, articles and services in Dublin and Tavira">
-		<title>Tony O'Brien Osteopathy</title>
+		<meta name="description" content="Tony O'Brien Osteopath, information, articles and services in Dublin and Tavira">
+		<title>Tony O'Brien Osteopath</title>
 		<link rel="shortcut icon" href="/tony-fav-icon.ico" type="image/x-icon">
 		<link href="/styles/site.css" rel="stylesheet">
 		<link href="/styles/additional.css" rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
 		{{!-- This file provides the default styling for the KeystoneJS Content Editor
 			- only renders when user is logged in and admin--}}
@@ -103,9 +103,9 @@
 						<td>
 							<a href="/contact">Contact Information</a>
 							<br>
-							<a href="http://www.facebook.com"> <i class="fa fa-facebook">&nbsp Facebook</i></a>
+							<a href="http://www.facebook.com"> <i class="fab fa-facebook">&nbsp Facebook</i></a>
 							<br>
-							<a href="http://www.linkedin.com"> <i class="fa fa-linkedin-square">&nbsp Linkedin</i></a>
+							<a href="http://www.linkedin.com"> <i class="fab fa-linkedin">&nbsp Linkedin</i></a>
 						</td>
 						<td>
 							<a href="https://www.osteopathy.ie/">Osteopathic Council of Ireland (O.C.I.)</a>
@@ -142,7 +142,14 @@ All Rights Reserved.</i>
 			//- Customise which Bootstrap javascript files are served by including
 			//- them specifically here, instead of bootstrap-3.3.5.min.js
 		--}}
+		<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
 		<script src="/js/bootstrap/bootstrap-3.3.5.min.js"></script>
+		<script type="text/javascript" src="/js/additional.js">
+		</script>
+		<script type="text/javascript" src="/js/bootstrap/modal.js"></script>
 		{{{isAdminEditorJS user}}}
 	</body>
 </html>
